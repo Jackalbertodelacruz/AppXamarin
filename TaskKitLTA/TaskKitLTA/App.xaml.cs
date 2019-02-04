@@ -11,7 +11,7 @@ namespace TaskKitLTA
         public App()
         {
             InitializeComponent();
-
+            //Coment
             MainPage = new InicioPage();
         }
 
