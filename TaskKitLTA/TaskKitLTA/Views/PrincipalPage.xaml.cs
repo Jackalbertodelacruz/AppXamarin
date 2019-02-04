@@ -10,19 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TaskKitLTA.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class InicioPage : ContentPage
+	public partial class PrincipalPage : ContentPage
 	{
-		public InicioPage ()
+		public PrincipalPage ()
 		{
 			InitializeComponent ();
 		}
-
-        public void OnClickEntrar(object sender, EventArgs e)
-        {
-
-            // MPostAsync();
-            MainPage main = new MainPage();
-            Navigation.PushModalAsync(main);
-        }
-    }
+	}
 }

@@ -7,7 +7,7 @@
             <Button Text="INICIAR"
                     TextColor="White"
                     BackgroundColor="#22A7F0"
-                    x:Name="ButtonLogin"/>
+                    x:Name="ButtonLogin" Clicked="OnClickEntrar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
