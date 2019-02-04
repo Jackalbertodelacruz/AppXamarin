@@ -1,4 +1,5 @@
 ﻿using System;
+using TaskKitLTA.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace TaskKitLTA
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new InicioPage();
         }
 
         protected override void OnStart()
