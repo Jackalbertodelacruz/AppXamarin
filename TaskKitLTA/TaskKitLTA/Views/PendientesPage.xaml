@@ -42,7 +42,7 @@
                     </StackLayout>
 
                     <StackLayout BackgroundColor="Transparent"  Grid.Row="0" Grid.Column="3">
-                        <Button WidthRequest="25" Image="eliminar" Clicked="btnEliminar"  BackgroundColor="Transparent" />
+                        <Button WidthRequest="25" Image="eliminar" Clicked="btnEliminarAsync"  BackgroundColor="Transparent" />
                     </StackLayout>
 
                     <StackLayout BackgroundColor="Transparent" Grid.Column="5">

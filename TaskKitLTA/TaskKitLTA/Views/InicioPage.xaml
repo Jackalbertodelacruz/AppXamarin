@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskKitLTA.Views.InicioPage">
     <ContentPage.Content>
-        <StackLayout Padding="30">
+        <StackLayout Padding="30" Margin="10">
             <Button Text="INICIAR"
-                    TextColor="White"
-                    BackgroundColor="#22A7F0"
-                    x:Name="ButtonLogin" Clicked="OnClickEntrar"/>
+                    x:Name="ButtonLogin" Clicked="OnClickEntrar"
+                    Image="iniciar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

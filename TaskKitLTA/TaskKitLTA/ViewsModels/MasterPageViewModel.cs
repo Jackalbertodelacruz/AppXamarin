@@ -27,7 +27,7 @@ namespace TaskKitLTA.ViewsModels
             Items.Add(new MasterPageItem
             {
                 Title = "Pendientes",
-                Icon = "l130.png",
+                Icon = "pendiente.png",
                 Target = typeof(PendientesPage)
             });
 

@@ -27,27 +27,48 @@ namespace TaskKitLTA.Views
         {
             Mostrar();
         }
-        public void btnEliminar(object sender, EventArgs e)
+        //public async Task BackButtonPressed()
+        //{
+        //    var action = await DisplayAlert("Exit?", "Are you sure to close", "Yes", "No");
+        //    if (action)
+        //    {
+        //        //  Navigate to first page
+        //    }
+        //}
+        public async void btnEliminarAsync(object sender, EventArgs e)
         {
-            if (lst.SelectedItem == null)
+
+
+            await EliminarAsync();
+
+        }
+
+        public async Task EliminarAsync()
+        {
+
+            var action = await DisplayAlert("Mensaje", "Decea Eliminar el pendiente?", "SI", "NO");
+            if (action)
             {
-                DisplayAlert("Mensaje", "Selecciona item", "OK");
-            }
-            else
-            {
-                var pendientes = new PendientesBD
+                if (lst.SelectedItem == null)
                 {
-                    Id = id,
-                    Descripcion = des,
-                    Titulo = titulo,
-                    Fecha = fecha
-                }; 
-                TaskRepository.Instancia.EliminarPicking(pendientes);
-                DisplayAlert("Mensaje","Eliminado Correctamente","OK");
+                    await DisplayAlert("Mensaje", "Selecciona item", "OK");
+                }
+                else
+                {
+                    var pendientes = new PendientesBD
+                    {
+                        Id = id,
+                        Descripcion = des,
+                        Titulo = titulo,
+                        Fecha = fecha
+                    };
+                    TaskRepository.Instancia.EliminarPicking(pendientes);
+                    await DisplayAlert("Mensaje", "Eliminado Correctamente", "OK");
+                }
+                Mostrar();
             }
             
         }
-
         public void Mostrar()
         {
             var allpendiente = TaskRepository.Instancia.GetAllPendientes();
