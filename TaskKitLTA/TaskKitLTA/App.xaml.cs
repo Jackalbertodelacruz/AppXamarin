@@ -2,15 +2,17 @@
 using TaskKitLTA.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using TaskKitLTA.BD;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TaskKitLTA
 {
     public partial class App : Application
     {
-        public App()
+        public App(String Filename)
         {
             InitializeComponent();
+
+            TaskRepository.Inicializador(Filename);
             //Coment
             MainPage = new InicioPage();
         }

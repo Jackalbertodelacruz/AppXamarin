@@ -21,7 +21,8 @@ namespace TaskKitLTA.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new TaskKitLTA.App());
+            string dbPath = FileAccess.GetLocalFilePath("pendientes.db3");
+            LoadApplication(new TaskKitLTA.App(dbPath));
         }
     }
 }

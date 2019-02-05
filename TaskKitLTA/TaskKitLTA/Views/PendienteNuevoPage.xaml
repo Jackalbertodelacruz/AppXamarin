@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskKitLTA.Views.PendienteNuevoPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="#33ab9f">
+                <Label HorizontalOptions="Center" Text="NUEVO PENDIENTE" FontSize="17" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" BackgroundColor="Transparent" >
+                <ScrollView WidthRequest="100">
+                    <StackLayout VerticalOptions="StartAndExpand" Padding="20" Spacing="0" Orientation="Vertical"  BackgroundColor="Transparent" >
+
+
+                        <Label Text="Titulo:" Font="MarkerFelt-Thin,Bold, 22" />
+                        <Entry PlaceholderColor="#7a7a7a"  x:Name="txtTitulo" Placeholder="ingrese el Titulo"/>
+
+                        <Label Font="MarkerFelt-Thin,Bold, 22" Text="Descripción:" />
+                        <Entry x:Name="txtDescripcion"  />
+                        
+                        <Label Font="MarkerFelt-Thin,Bold, 22" Text="Fecha:" />
+                        <DatePicker x:Name="dtmFecha"/>
+
+                        <Button Text="Crear Pendientes" Clicked="ClickNuevoPendiente" BorderRadius="20" BackgroundColor="#7a7a7a"  />
+
+                        <!--<ListView x:Name="ltyPendientes" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Titulo}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>-->
+
+
+                        <!--"Sienna"-->
+
+
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
